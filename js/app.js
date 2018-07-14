@@ -1,6 +1,6 @@
 // Enemies our player must avoid
-var Enemy = function(x, y, s) {
-    // Variables applied to each of our instances go here,
+let Enemy = function(x, y, s) {
+    // letiables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = x;
     this.y = y;
@@ -43,7 +43,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(x, y, s) {
+let Player = function(x, y, s) {
     this.x = x;
     this.y = y;
     this.s = s;
@@ -84,28 +84,26 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(keyPress) {
-    switch (keyPress) {
-        case 'left':
-            this.x -= 100;
-            break;
-        case 'up':
-            this.y -= 80;
-            break;
-        case 'right':
-            this.x += 100;
-            break;
-        case 'down':
-            this.y += 80;
-            break;
-    }
+  if (keyPress === 'left') {
+    this.x -= 100;
+  };
+  if (keyPress === 'up') {
+    this.y -= 80;
+  };
+  if (keyPress === 'right') {
+    this.x += 100;
+  };
+  if (keyPress === 'down') {
+    this.y += 80;
+  };
 };
 
-var allEnemies = [];
+let allEnemies = [];
 
 // three enemy posirions for the three pavon block
-var enemyPositions = [60, 140, 220];
-var player = new Player(100, 380, 50);
-var enemy;
+let enemyPositions = [60, 140, 220];
+let player = new Player(100, 380, 50);
+let enemy;
 
 // set enemy positions for the three pavon blocks
 enemyPositions.forEach(function(y) {
@@ -116,7 +114,7 @@ enemyPositions.forEach(function(y) {
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
+    let allowedKeys = {
         37: 'left',
         38: 'up',
         39: 'right',
