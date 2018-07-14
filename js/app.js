@@ -50,7 +50,12 @@ var Player = function(x, y, s) {
     this.sprite = 'images/char-boy.png';
 };
 
-function winTheGame() {};
+function winTheGame() {
+  document.querySelector('#won-the-game').classList += 'show';
+    setTimeout(function () {
+    document.querySelector('#won-the-game').classList = '';
+  }, 1000);
+};
 
 Player.prototype.update = function() {
     // Prevent player from moving beyond canvas wall boundaries

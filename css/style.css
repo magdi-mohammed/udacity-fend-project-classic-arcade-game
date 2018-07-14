@@ -1,3 +1,22 @@
 body {
     text-align: center;
 }
+
+#won-the-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #f1f1f1;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+#won-the-game.show {
+  visibility: visible;
+  opacity: 1;
+}
