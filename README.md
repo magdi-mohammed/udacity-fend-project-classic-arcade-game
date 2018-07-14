@@ -15,6 +15,6 @@ or you can [clone](https://github.com/magdi-mohammed/udacity-fend-project-classi
 
 ![Start Screen](screenshots/start-game.png "start screen")
 
--   Worn the game action
+-   Won the game action
 
 ![Won Game](screenshots/won-game.png "Won Game")
